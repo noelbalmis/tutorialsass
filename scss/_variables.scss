@@ -1,0 +1,30 @@
+
+@use "sass:map";
+
+$primary: white;
+$secondary: black;
+$success: lightgreen;
+$warning: orange;
+$error: lightcoral;
+$info: cadetblue;
+$card: lightgray;
+
+$colors: (
+    primary: $primary,
+    secondary: $secondary,
+    success: $success,
+    warning: $warning,
+    error: $error,
+    info: $info,
+    card: $card
+);
+
+$margin: 1rem;
+$padding: 1rem;
+
+$border-thickness: 0.15rem;
+$border-radius: 0.5rem;
+
+$font-size: 1rem;
+$font-size-small: $font-size * 0.8;
+$font-size-large: $font-size * 1.2;

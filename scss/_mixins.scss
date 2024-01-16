@@ -1,0 +1,22 @@
+@mixin border ($color: $secondary) {
+    border: {
+        color: $color;
+        radius: $border-radius;
+        width: $border-thickness;
+        style: solid;
+    }
+}
+
+@mixin button($bgcolor: $primary) {
+    padding: $padding;
+    margin: $margin;
+    font-weight: bold;
+    width: 10rem;
+    text-align: center;
+    border-radius: $border-radius;
+    color: calculateTextColor($bgcolor);
+
+    &:hover {
+        background-color: darken($bgcolor, 10%);
+    }
+}

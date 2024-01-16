@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.success {
+    background: {
+        color: $success;
+    }
+}
+
+.error {
+    background: {
+        color: $error;
+    }
+}
+
+.warning {
+    background: {
+        color: $warning;
+    }
+}
+
+.info {
+    background: {
+        color: $info;
+    }
+}
+
+.flex-container {
+    display: flex;
+}
+
+.box {
+    padding: $padding;
+    margin: $margin;
+    @include border;
+    font-weight: bold;
+    width: 10rem;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: $margin;
+    padding: $padding;
+    @include border;
+
+    .card-title {
+        font-size: medium;
+        margin-bottom: 1rem;
+    }
+    
+    .card-body {
+        a {
+            text-decoration: none;
+            color: $secondary;
+            font-size: $font-size-small;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        span {
+            font-size: $font-size-large;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn {
+    @include button;
+}
+
+@each $color, $value in $colors {
+    .btn-#{$color} {
+        @include button($value);
+        background-color: $value
+    }
+    .btn-#{$color}-outlined {
+        @include button($value);
+        @include border($value);
+    }
+}
